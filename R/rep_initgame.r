@@ -31,26 +31,7 @@ make.cheating.payoffs = function(m,add.labels = TRUE) {
   }  
   return(c.mat)
 
-	
-	
-	# Method for n player games, considerably slower than the two player method. Even though it is coded in C
-	if(!is.loaded("repgames"))
-		library.dynam("repgames", package = "repgames", lib.loc = NULL,
-              verbose = getOption("verbose"),
-              file.ext = .Platform$dynlib.ext)
 
-
-		
-	m$c = rep(-99999,m$nA*m$n)	
-
-	ret = .C("make_cheating_payoff",as.integer(m$n), as.integer(m$a.dim), as.integer(m$shift.ai),
-	  as.double(m$g),as.double(m$c))
-
-	c = matrix(ret[[5]],m$nA,m$n)
-
-	plot(c.mat-c)
-		
-	return(c)  
 }
 
 #' Init a new repeated game, see the tutorial for a description and examples
