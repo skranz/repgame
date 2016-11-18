@@ -6,13 +6,17 @@ This is an R package for numerically solving discounted infinitely repeated game
 
 ## 1. Installation
 
-### 1.1 Installing R and RStudio
+### 1.1 Installing R, RTools and RStudio
 
 First you need to install R, which is a very popular and powerful open source statistical programming language. You can download R for Windows, Max or Linux here:
   
   http://cran.r-project.org/
 
 Note: If you have already installed R, you may want to update to the newest version by installing it again. 
+
+If you use Windows, you also have to install RTools, which allow to compile C++ code, that is required for installing the repgame package from Github:
+
+  https://cran.r-project.org/bin/windows/Rtools/
 
 I recommend to additionally install RStudio, which is a great open source IDE for R:
 
