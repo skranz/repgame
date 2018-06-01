@@ -6,26 +6,31 @@ This is an R package for numerically solving discounted infinitely repeated game
 
 ## 1. Installation
 
-### 1.1 Installing R, RTools and RStudio
+### 1.1 Installing R and RStudio
 
 First you need to install R, which is a very popular and powerful open source statistical programming language. You can download R for Windows, Max or Linux here:
   
-  http://cran.r-project.org/
-
-Note: If you have already installed R, you may want to update to the newest version by installing it again. 
-
-If you use Windows, you also have to install RTools, which allow to compile C++ code, that is required for installing the repgame package from Github:
-
-  https://cran.r-project.org/bin/windows/Rtools/
+[http://cran.r-project.org](http://cran.r-project.org)
 
 I recommend to additionally install RStudio, which is a great open source IDE for R:
 
-http://rstudio.org/
+[http://rstudio.org](http://rstudio.org)
 
-### 1.2 Installing necessary R packages
+### 1.2 Installing the repgame package
 
-You need to install several R packages from the internet. To do so, simply run in the R console the following code (you can use copy & paste):
+To install the repgame package run the following code in your R console:
+```r
+install.packages("repgame",
+	repos = c("https://skranz-repo.github.io/drat/",getOption("repos")))
+```
+Note that `repgame` is not hosted on CRAN but on my own Github based repository. You therefore have to specify the `repos` argument as in the call above. 
 
+If you use Windows, binaries are available in my repository for some R version (e.g. 3.3.x and 3.5.x), but not for all. If there is no binary version available and installation fails, you also have to install RTools for Windows to compile the package from source. See
+
+[https://cran.r-project.org/bin/windows/Rtools/](https://cran.r-project.org/bin/windows/Rtools/)
+
+
+It is also possible to install the packages from Github and the dependencies manually from CRAN by pasting the following code (RTools will then always be necessary on Windows):
 ```r
 
 # Install CRAN Packages
